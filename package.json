@@ -1,0 +1,35 @@
+{
+  "name": "link-analyzer",
+  "version": "0.1.0",
+  "description": "Analyze links in your (geo)data catalogues",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint *.js lib test",
+    "test-unit": "istanbul cover _mocha",
+    "test": "npm run lint && npm run test-unit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inspiresh/link-analyzer.git"
+  },
+  "keywords": [
+    "links",
+    "analyzer",
+    "http",
+    "data",
+    "catalogue",
+    "inspire",
+    "ogc"
+  ],
+  "author": "Jérôme Desboeufs <jerome.desboeufs@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/inspiresh/link-analyzer/issues"
+  },
+  "homepage": "https://github.com/inspiresh/link-analyzer#readme",
+  "devDependencies": {
+    "eslint": "^3.1.0",
+    "istanbul": "^0.4.4",
+    "mocha": "^2.5.3"
+  }
+}
