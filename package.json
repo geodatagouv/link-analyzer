@@ -1,7 +1,7 @@
 {
   "name": "link-analyzer",
   "version": "0.1.0",
-  "description": "Analyze links in your (geo)data catalogues",
+  "description": "Analyze links in your (geo)data catalogs",
   "main": "index.js",
   "scripts": {
     "lint": "eslint *.js lib test",
