@@ -2,11 +2,11 @@
   "name": "link-analyzer",
   "version": "0.1.0",
   "description": "Analyze links in your (geo)data catalogs",
-  "main": "index.js",
   "scripts": {
     "lint": "eslint *.js lib test",
     "test-unit": "istanbul cover _mocha",
-    "test": "npm run lint && npm run test-unit"
+    "test": "npm run lint && npm run test-unit",
+    "start": "node server"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,25 @@
     "url": "https://github.com/inspiresh/link-analyzer/issues"
   },
   "homepage": "https://github.com/inspiresh/link-analyzer#readme",
+  "dependencies": {
+    "bluebird": "^3.4.1",
+    "body-parser": "^1.15.2",
+    "content-disposition": "^0.5.0",
+    "cors": "^2.7.1",
+    "express": "^4.14.0",
+    "file-type": "^3.8.0",
+    "findit": "^2.0.0",
+    "kue-lite": "^0.1.0",
+    "lodash": "^4.13.1",
+    "mongoose": "^4.4.6",
+    "morgan": "^1.7.0",
+    "request": "^2.73.0",
+    "rimraf": "^2.4.2",
+    "through2": "^2.0.0",
+    "tmp": "0.0.28",
+    "underscore.string": "^3.1.1",
+    "urijs": "^1.16.1"
+  },
   "devDependencies": {
     "eslint": "^3.1.0",
     "istanbul": "^0.4.4",
