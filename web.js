@@ -5,6 +5,7 @@ const morgan = require('morgan');
 const { authenticateSubscriber } = require('./lib/middlewares');
 const linksController = require('./lib/controllers/links');
 const app = express();
+const config = require('./lib/config');
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -19,4 +20,4 @@ app.get('/api/links/:linkId', linksController.show);
 app.post('/api/links/:linkId/check', linksController.check);
 app.post('/api/links', authenticateSubscriber, linksController.upsertAndSubscribe);
 
-app.listen(process.env.PORT || 5000);
+app.listen(config.get('port'));
