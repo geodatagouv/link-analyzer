@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/inspiresh/link-analyzer.git"
+    "url": "git+https://github.com/inspireteam/link-analyzer.git"
   },
   "keywords": [
     "links",
@@ -24,9 +24,9 @@
   "author": "Jérôme Desboeufs <jerome.desboeufs@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/inspiresh/link-analyzer/issues"
+    "url": "https://github.com/inspireteam/link-analyzer/issues"
   },
-  "homepage": "https://github.com/inspiresh/link-analyzer#readme",
+  "homepage": "https://github.com/inspireteam/link-analyzer#readme",
   "dependencies": {
     "bluebird": "^3.4.1",
     "body-parser": "^1.15.2",
