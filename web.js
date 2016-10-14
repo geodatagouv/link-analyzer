@@ -13,11 +13,14 @@ app.use(morgan('dev'));
 
 /* Injectors */
 app.param('linkId', linksController.link);
+app.param('checkNum', linksController.check);
 
 /* Actions */
 app.get('/api/links/last-created', linksController.lastCreated);
 app.get('/api/links/:linkId', linksController.show);
-app.post('/api/links/:linkId/check', linksController.check);
+app.post('/api/links/:linkId/check', linksController.doCheck);
+app.get('/api/links/:linkId/checks', linksController.checks);
+app.get('/api/links/:linkId/checks/:checkNum', linksController.showCheck);
 app.post('/api/links', authenticateSubscriber, linksController.upsertAndSubscribe);
 
 app.listen(config.get('port'));
