@@ -1,50 +1,31 @@
 env:
   es6: true
   node: true
-extends: 'eslint:recommended'
+extends: 'standard'
 rules:
-  indent:
-    - error
-    - 2
   linebreak-style:
     - error
     - unix
-  quotes:
-    - error
-    - single
-  semi:
-    - error
-    - never
   comma-dangle:
     - error
     - always-multiline
-  keyword-spacing:
+  space-before-function-paren:
     - error
-  key-spacing:
-    - error
-  array-bracket-spacing:
-    - error
-    - never
-  block-spacing:
-    - error
-    - always
-  arrow-spacing:
-    - error
-  space-before-blocks:
-    - error
-  space-infix-ops:
-    - error
-  no-whitespace-before-property:
-    - error
-  space-in-parens:
-    - error
-    - never
-  object-curly-spacing:
-    - error
-    - always
+    - anonymous: always
+      named: never
+      asyncArrow: always
+  padded-blocks:
+    - off
   no-warning-comments:
     - warn
   no-console:
     - warn
   no-var:
     - error
+  no-multiple-empty-lines:
+    - error
+    - max: 2
+  no-return-assign:
+    - off
+  no-path-concat:
+    - off

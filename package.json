@@ -4,6 +4,7 @@
   "description": "Analyze links in your (geo)data catalogs",
   "scripts": {
     "lint": "eslint *.js lib test",
+    "lint:fix": "eslint --fix *.js lib test",
     "test:unit": "mocha",
     "test:coverage": "istanbul cover _mocha",
     "test": "npm run lint && npm run test:coverage",
@@ -51,6 +52,9 @@
   },
   "devDependencies": {
     "eslint": "^3.1.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.3.0",
+    "eslint-plugin-standard": "^2.0.1",
     "expect.js": "^0.3.1",
     "istanbul": "^0.4.4",
     "mocha": "^3.0"
