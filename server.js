@@ -1,2 +1,2 @@
-require('./worker');
-require('./web');
+require('./worker')
+require('./web')

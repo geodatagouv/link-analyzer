@@ -1,7 +1,7 @@
 /* eslint-env mocha */
-const expect = require('expect.js');
-const { explore } = require('../lib/directoryExplorer');
-const { computeFileDigest } = require('../lib/directoryExplorer/digest');
+const expect = require('expect.js')
+const { explore } = require('../lib/directoryExplorer')
+const { computeFileDigest } = require('../lib/directoryExplorer/digest')
 
 describe('directoryExplorer', () => {
 
@@ -9,10 +9,10 @@ describe('directoryExplorer', () => {
     describe('regular file', () => {
       it('should compute the sha1 digest', () => {
         return computeFileDigest(__dirname + '/data/file-to-digest')
-          .then(digest => expect(digest).to.equal('bdc37c074ec4ee6050d68bc133c6b912f36474df'));
-      });
-    });
-  });
+          .then(digest => expect(digest).to.equal('bdc37c074ec4ee6050d68bc133c6b912f36474df'))
+      })
+    })
+  })
 
   describe('explore()', () => {
 
@@ -57,11 +57,11 @@ describe('directoryExplorer', () => {
                   ],
                 },
               ],
-            });
-          });
-      });
-    });
+            })
+          })
+      })
+    })
 
-  });
+  })
 
-});
+})
