@@ -20,6 +20,7 @@ app.get('/api/links/last-created', linksController.lastCreated)
 app.get('/api/links/:linkId', linksController.show)
 app.post('/api/links/:linkId/checks', linksController.doCheck)
 app.get('/api/links/:linkId/checks', linksController.checks)
+app.get('/api/links/:linkId/checks/last', linksController.lastCheck)
 app.get('/api/links/:linkId/checks/:checkNum', linksController.showCheck)
 app.post('/api/links', authenticateSubscriber, linksController.upsertAndSubscribe)
 
