@@ -8,6 +8,7 @@ require('./lib/mongoose')
 
 // Listen for jobs
 queue.process('link-analyzer:check', 10, require('./lib/jobs/check'))
+queue.process('link-analyzer:notify', 10, require('./lib/jobs/notify'))
 
 
 /* Handle interruptions */
