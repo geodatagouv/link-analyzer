@@ -1,7 +1,8 @@
-env:
-  es6: true
-  node: true
 extends: 'standard'
+env:
+  node: true
+parserOptions:
+  ecmaVersion: 8
 rules:
   linebreak-style:
     - error

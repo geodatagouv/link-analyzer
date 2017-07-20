@@ -1,3 +1,5 @@
+'use strict';
+
 require('./lib/mongoose');
 const express = require('express')
 const bodyParser = require('body-parser')
