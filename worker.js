@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 const { queue } = require('./lib/queue')
 const { once } = require('lodash')
