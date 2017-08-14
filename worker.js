@@ -1,7 +1,8 @@
 'use strict'
+/* eslint unicorn/no-process-exit: "off" */
 
-const { queue } = require('./lib/queue')
 const { once } = require('lodash')
+const { queue } = require('./lib/queue')
 
 // Connect to MongoDB and load models
 require('./lib/mongoose')
@@ -13,13 +14,13 @@ queue.process('link-analyzer:notify', 10, require('./lib/jobs/notify'))
 
 /* Handle interruptions */
 const gracefulShutdown = once(() => {
-  queue.shutdown(5000, function (err) {
+  queue.shutdown(5000, err => {
     console.log('Job queue is shut down. ', err || '')
     process.exit()
   })
 })
 
-process.on('message', function (msg) {
+process.on('message', msg => {
   if (msg === 'shutdown') {
     gracefulShutdown()
   }
@@ -27,7 +28,7 @@ process.on('message', function (msg) {
 
 process.on('SIGTERM', gracefulShutdown)
 
-process.on('uncaughtException', function (err) {
+process.on('uncaughtException', err => {
   console.log('Uncaught exception!!')
   console.log(err)
   gracefulShutdown()

@@ -3,11 +3,9 @@
   "version": "0.1.0",
   "description": "Analyze links in your (geo)data catalogs",
   "scripts": {
-    "lint": "eslint *.js lib test",
-    "lint:fix": "eslint --fix *.js lib test",
-    "test:unit": "mocha",
-    "test:coverage": "istanbul cover _mocha",
-    "test": "npm run lint && npm run test:coverage",
+    "lint": "xo",
+    "lint:fix": "xo --fix",
+    "test": "yarn lint",
     "start": "node server"
   },
   "repository": {
@@ -52,12 +50,34 @@
     "urijs": "^1.16.1"
   },
   "devDependencies": {
-    "eslint": "^3.1.0",
-    "eslint-config-standard": "^6.2.1",
-    "eslint-plugin-promise": "^3.3.0",
-    "eslint-plugin-standard": "^2.0.1"
+    "xo": "^0.18.2"
   },
   "engines": {
     "node": ">= 6.0"
+  },
+  "xo": {
+    "space": 2,
+    "semicolon": false,
+    "rules": {
+      "comma-dangle": [
+        "error",
+        "always-multiline"
+      ],
+      "curly": "off",
+      "object-curly-spacing": [
+        "error",
+        "always"
+      ],
+      "import/no-unassigned-import": "off",
+      "padded-blocks": "off",
+      "no-multiple-empty-lines": [
+        "error",
+        {
+          "max": 2
+        }
+      ],
+      "capitalized-comments": "off",
+      "no-use-extend-native/no-use-extend-native": "off"
+    }
   }
 }

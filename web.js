@@ -1,14 +1,17 @@
 'use strict'
 
-require('./lib/mongoose')
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const morgan = require('morgan')
+
+require('./lib/mongoose')
+
 const { authenticateSubscriber } = require('./lib/middlewares')
 const linksController = require('./lib/controllers/links')
-const app = express()
 const config = require('./lib/config')
+
+const app = express()
 
 app.use(cors())
 app.use(bodyParser.json())
