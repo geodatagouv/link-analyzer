@@ -38,6 +38,7 @@
     "findit": "^2.0.0",
     "kue-lite": "^0.1.0",
     "lodash": "^4.13.1",
+    "mississippi": "^1.3.0",
     "mongoose": "^4.4.6",
     "morgan": "^1.7.0",
     "nconf": "^0.8.4",
