@@ -1,0 +1,8 @@
+[
+    {
+        "name": "Passerelle Inspire",
+        "subscriberId": "passerelle-inspire",
+        "webhook": "http://localhost:5000/hooks/link-analyzer",
+        "token": "replace me"
+    }
+]
