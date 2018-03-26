@@ -1,3 +1,7 @@
+# ARCHIVED
+
+Replaced by [link-proxy](https://github.com/inspireteam/link-proxy)
+
 # link-analyzer
 Analyze links in your (geo)data catalogs
 
